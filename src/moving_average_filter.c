@@ -1,4 +1,4 @@
-#define SIZE 3
+#include "moving_average_filter.h"
 
 static int inputs[SIZE];
 

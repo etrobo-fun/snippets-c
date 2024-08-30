@@ -1,14 +1,6 @@
-#define MAX(x, y) ((x > y) ? x : y)
-#define MIN(x, y) ((x < y) ? x : y)
+#include "rgb2hsv.h"
 
-typedef struct
-{
-  uint16_t h; // 色相
-  uint16_t s; // 彩度
-  uint16_t v; // 明度
-} hsv_raw_t
-
-void convert_rgb_to_hsv(rgb_raw_t *in, hsv_raw_t *out)
+void convert_rgb_to_hsv(rgb *in, hsv *out)
 {
   uint16_t r = in->r;
   uint16_t g = in->g;
@@ -29,13 +21,14 @@ void convert_rgb_to_hsv(rgb_raw_t *in, hsv_raw_t *out)
   }
   else if(max == g)
   {
-    h_ = 60 * (r - b) / diff_max_min + 120
+    h_ = 60 * (r - b) / diff_max_min + 120;
   }
   else // max == b
   {
-    h_ = 60 * (g - r) / diff_max_min + 240
+    h_ = 60 * (g - r) / diff_max_min + 240;
   }
-  if(h_ < 0) h+= 360;
+
+  if(h_ < 0) h_ += 360;
   uint16_t h = h_ % 360;
 
   out->h = h;

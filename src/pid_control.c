@@ -1,7 +1,4 @@
-#define KP 0.9
-#define KI 0
-#define KD 0
-#define DELTA_T 0.01
+#include "pid_control.h"
 
 static double error = 0;
 static double lastError = 0;
