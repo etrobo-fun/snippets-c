@@ -21,11 +21,9 @@ $(OBJS): $(SRCS)
 	$(CC) $(CFLAGS) $(INCLUDES) -c $(SRCS)
 
 all: clean $(OBJS) $(TARGET)
+	./$(TARGET)
 
 clean:
 	rm -f $(OBJS) $(TARGET)
-
-test: all
-	./$(TARGET)
 
 .PHONY: all clean
