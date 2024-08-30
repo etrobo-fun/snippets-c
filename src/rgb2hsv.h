@@ -8,9 +8,9 @@
 
 typedef struct
 {
-  uint16_t r; // 色相
-  uint16_t g; // 彩度
-  uint16_t b; // 明度
+  uint16_t r;
+  uint16_t g;
+  uint16_t b;
 } rgb;
 
 typedef struct
