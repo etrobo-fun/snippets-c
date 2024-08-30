@@ -4,7 +4,7 @@ static double error = 0;
 static double lastError = 0;
 static double target = 20;
 
-static double p = 0, i = 0; d = 0;
+static double p = 0, i = 0, d = 0;
 
 double calc_pid_control(double input)
 {
