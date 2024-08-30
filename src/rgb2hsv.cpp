@@ -26,7 +26,7 @@ void convert_rgb_to_hsv(rgb *in, hsv *out)
   }
   else if(max == g)
   {
-    h_ = 60 * (r - b) / diff_max_min + 120;
+    h_ = 60 * (b - r) / diff_max_min + 120;
   }
   else // max == b
   {
