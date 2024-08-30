@@ -25,4 +25,7 @@ all: clean $(OBJS) $(TARGET)
 clean:
 	rm -f $(OBJS) $(TARGET)
 
+test: all
+	./$(TARGET)
+
 .PHONY: all clean
