@@ -35,7 +35,17 @@ TEST(Rgb2HsvTest, Black)
   rgb2hsv_test({0, 0, 0}, {0, 0, 0});
 }
 
-TEST(Rgb2HsvTest, Random1)
+TEST(Rgb2HsvTest, RandomRedMax)
+{
+  rgb2hsv_test({135, 6, 30}, {349, 243, 135});
+}
+
+TEST(Rgb2HsvTest, RandomGreenMax)
 {
   rgb2hsv_test({38, 143, 140}, {178, 187, 143});
+}
+
+TEST(Rgb2HsvTest, RandomBlueMax)
+{
+  rgb2hsv_test({1, 72, 83}, {188, 251, 83});
 }
