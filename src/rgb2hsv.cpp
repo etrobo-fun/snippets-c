@@ -30,7 +30,7 @@ void convert_rgb_to_hsv(rgb *in, hsv *out)
   }
   else // max == b
   {
-    h_ = 60 * (g - r) / diff_max_min + 240;
+    h_ = 60 * (r - g) / diff_max_min + 240;
   }
 
   if(h_ < 0) h_ += 360;
