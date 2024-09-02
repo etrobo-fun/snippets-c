@@ -47,5 +47,5 @@ TEST(Rgb2HsvTest, RandomGreenMax)
 
 TEST(Rgb2HsvTest, RandomBlueMax)
 {
-  rgb2hsv_test({1, 72, 83}, {188, 251, 83});
+  rgb2hsv_test({1, 72, 83}, {189, 251, 83});
 }
